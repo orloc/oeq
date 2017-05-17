@@ -3,7 +3,7 @@ package api.dao;
 import api.util.Config;
 import org.sql2o.Sql2o;
 
-abstract class AbstractDao<T> {
+abstract class AbstractDao {
 
     static Sql2o sql20 = null;
 
