@@ -6,15 +6,16 @@ import org.slf4j.LoggerFactory;
 import spark.Request;
 import spark.Response;
 
+import static api.util.JsonUtil.dataToJson;
+
 public class UserController {
 
     static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     public static String get(Request request, Response response) {
         UserDao dao = new UserDao();
-
-
-        return "";
+        response.status(200);
+        return dataToJson(dao.list());
     }
 
     /*

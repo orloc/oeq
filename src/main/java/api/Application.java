@@ -20,6 +20,10 @@ public class Application {
         Route.Api.security();
         Route.Api.user();
 
+        after(Route.Api.prefix+"/*", ((request, response) ->{
+            response.type("application/json");
+        }));
+
     }
 
 }
